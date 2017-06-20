@@ -26,6 +26,8 @@ on early-init
     write /sys/block/sdf/queue/nr_requests 256
     write /sys/block/sda/queue/iosched/group_idle 0
     write /sys/block/sda/queue/iosched/slice_idle 0
+    # Disable vblank IRQ immediately after turning off
+    write /sys/module/drm/parameters/vblankoffdelay -1
 
 on property:vendor.post_boot.parsed=1
     # Setup runtime cpusets
