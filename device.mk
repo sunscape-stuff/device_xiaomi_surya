@@ -354,6 +354,9 @@ MSMSTEPPE := sm6150
 TARGET_BOARD_PLATFORM := $(MSMSTEPPE)
 TARGET_SEPOLICY_DIR := msmsteppe
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
 # QTI
 $(call inherit-product, device/qcom/common/common.mk)
 TARGET_USE_SM8150_HALS := true
