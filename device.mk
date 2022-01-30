@@ -208,7 +208,6 @@ PRODUCT_PACKAGES += \
 
 TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
 
-
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.memory.block@1.0.vendor
@@ -220,6 +219,11 @@ PRODUCT_COPY_FILES += \
 # Incremental FS
 PRODUCT_VENDOR_PROPERTIES += \
    ro.incremental.enable=1
+
+# HWUI
+PRODUCT_VENDOR_PROPERTIES += \
+   debug.hwui.use_hint_manager=true \
+   debug.hwui.target_cpu_time_percent=30
 
 # Init scripts
 PRODUCT_PACKAGES += \
