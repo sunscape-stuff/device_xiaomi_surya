@@ -135,6 +135,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.disable_backpressure=1 \
     debug.sf.latch_unsignaled=1 \
+    debug.sf.defer_refresh_rate_when_off=1 \
     debug.sf.layer_caching_active_layer_timeout_ms=1000 \
     persist.sys.sf.native_mode=2 \
     ro.surface_flinger.enable_frame_rate_override=false \
