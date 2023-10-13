@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# GSI keys
+$(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
+
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
@@ -196,9 +199,6 @@ PRODUCT_SYSTEM_PROPERTIES += \
 # GFX
 PRODUCT_VENDOR_PROPERTIES += \
     ro.config.avoid_gfx_accel=true
-
-# GSI keys
-$(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # HIDL
 PRODUCT_PACKAGES += \
