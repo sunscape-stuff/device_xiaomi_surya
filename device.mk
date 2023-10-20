@@ -278,10 +278,12 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     media.stagefright.enable-scan=true \
     mmp.enable.3g2=true \
     persist.mm.enable.prefetch=true
-    
+
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
+    hardware/google/interfaces \
+    hardware/google/pixel \
     hardware/xiaomi
 
 # Netflix
@@ -342,6 +344,10 @@ PRODUCT_COPY_FILES += \
 MSMSTEPPE := sm6150
 TARGET_BOARD_PLATFORM := $(MSMSTEPPE)
 TARGET_SEPOLICY_DIR := msmsteppe
+
+# Power
+TARGET_PROVIDES_POWERHAL := true
+PRODUCT_PACKAGES += android.hardware.power-service.xiaomi-libperfmgr
 
 # QTI
 $(call inherit-product, device/qcom/common/common.mk)
