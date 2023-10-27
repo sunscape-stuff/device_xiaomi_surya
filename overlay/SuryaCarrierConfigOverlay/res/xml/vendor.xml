@@ -45,10 +45,10 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
 
     <carrier_config>
         <boolean name="apn_expand_bool" value="true" />
-        <boolean name="world_phone_bool" value="false" />
+        <boolean name="world_phone_bool" value="true" />
         <boolean name="allow_adding_apns_bool" value="true" />
         <boolean name="hide_preferred_network_type_bool" value="false" />
-        <boolean name="show_cdma_choices_bool" value="false" />
+        <boolean name="show_cdma_choices_bool" value="true" />
         <boolean name="allow_video_call_in_low_battery" value="true" />
         <boolean name="config_enable_display_14digit_imei" value="false" />
         <!-- Determines whether UI extensions for video calls should be used or not -->
@@ -116,6 +116,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="carrier_cross_sim_ims_available_bool" value="true" />
         <!-- Config for B2C Enriched Calls Feature support -->
         <boolean name="carrier_b2c_enriched_calling_supported_bool" value="false"/>
+	<!-- Use the 4G icon for LTE -->
+	<boolean name="show_4g_for_lte_data_icon_bool" value="true" />
         <!-- Force voLTE/voWIFI/viLTE -->
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />

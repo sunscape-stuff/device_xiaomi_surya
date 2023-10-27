@@ -19,6 +19,10 @@
     <!-- Whether to show a preference item for regulatory information in About phone -->
     <bool name="config_show_regulatory_info">true</bool>
     
+    <!-- Fingerprint sensor -->
+    <dimen name="fingerprint_dot_radius">0dp</dimen>
+    <dimen name="fingerprint_pulse_radius">0dp</dimen>
+
     <!-- The number of vibration intensity levels supported by the device.
          Note that this should correspond to the ability to vary the vibration amplitude, with
          enough dynamic range to have at least as many distinct intensity levels as defined here.
