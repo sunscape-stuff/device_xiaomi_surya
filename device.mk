@@ -208,15 +208,18 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Init scripts
 PRODUCT_PACKAGES += \
     init.qti.dcvs.sh \
-    init.qti.early_init.sh
+    init.qti.early_init.sh \
+    init.qti.diag.sh
 
 PRODUCT_PACKAGES += \
     fstab.zram \
     init.surya.rc \
     init.surya.perf.rc \
     init.target.rc \
+    init.target.charger.rc \
     init.xiaomi.fingerprint.rc \
     init.xiaomi.rc \
+    init.qti.diag.rc \
     ueventd.xiaomi.rc
 
 PRODUCT_COPY_FILES += \
@@ -394,12 +397,14 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.sys.thermal.data.path=/data/vendor/thermal/
 
 # USB
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/init.qcom.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.usb.rc
+PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/usb/etc
+
+PRODUCT_PACKAGES += \
+    init.qcom.usb.rc \
+    init.qcom.usb.sh
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/init.mi.usb.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.mi.usb.sh \
-    $(LOCAL_PATH)/init/init.qcom.usb.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.usb.sh
+    $(LOCAL_PATH)/init/init.mi.usb.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.mi.usb.sh
 
 ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_VENDOR_PROPERTIES += \

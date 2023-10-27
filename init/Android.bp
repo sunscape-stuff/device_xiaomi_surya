@@ -47,6 +47,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.target.charger.rc",
+    src: "init.target.charger.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.xiaomi.fingerprint.rc",
     src: "init.xiaomi.fingerprint.rc",
     sub_dir: "init",
@@ -56,6 +63,13 @@ prebuilt_etc {
 prebuilt_etc {
     name: "init.xiaomi.rc",
     src: "init.xiaomi.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qti.diag.rc",
+    src: "init.qti.diag.rc",
     sub_dir: "init",
     vendor: true,
 }
@@ -76,5 +90,11 @@ sh_binary {
 sh_binary {
     name: "init.qti.early_init.sh",
     src: "init.qti.early_init.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.diag.sh",
+    src: "init.qti.diag.sh",
     vendor: true,
 }
