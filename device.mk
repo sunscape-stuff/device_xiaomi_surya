@@ -189,7 +189,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
 # GFX
 PRODUCT_VENDOR_PROPERTIES += \
     ro.config.avoid_gfx_accel=true
-    
+
 # GSI keys
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
