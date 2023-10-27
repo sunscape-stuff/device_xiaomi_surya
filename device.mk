@@ -319,12 +319,14 @@ PRODUCT_PACKAGES += \
     AOSPSuryaSettings \
     AOSPSuryaSystemUIOverlay \
     KarnaFrameworksOverlay \
+    SuryaNoCutoutOverlay \
     NotchBarKillerOverlay \
     SuryaCarrierConfigOverlay \
     SuryaFrameworksOverlay \
     SuryaNfcOverlay \
+    SuryaApertureOverlay \
     SuryaSettingsOverlay \
-    SuryaSystemUIOverlay 
+    SuryaSystemUIOverlay
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
