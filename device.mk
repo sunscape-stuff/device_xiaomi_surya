@@ -104,6 +104,10 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 PRODUCT_PACKAGES += \
     XiaomiParts
 
+# KProfiles
+PRODUCT_PACKAGES += \
+    KProfiles
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/parts/init.xiaomiparts.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.xiaomiparts.rc \
     $(LOCAL_PATH)/parts/privapp-permissions-parts.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-parts.xml
@@ -219,6 +223,7 @@ PRODUCT_PACKAGES += \
     init.target.charger.rc \
     init.xiaomi.fingerprint.rc \
     init.xiaomi.rc \
+    init.kprofiles.rc \
     init.qti.diag.rc \
     ueventd.xiaomi.rc
 

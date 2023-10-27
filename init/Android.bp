@@ -68,6 +68,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.kprofiles.rc",
+    src: "init.kprofiles.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.qti.diag.rc",
     src: "init.qti.diag.rc",
     sub_dir: "init",
