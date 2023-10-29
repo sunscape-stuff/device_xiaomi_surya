@@ -340,15 +340,15 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/perfboostsconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfboostsconfig.xml \
     $(LOCAL_PATH)/configs/perf/perfconfigstore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfconfigstore.xml
 
-# Platform
-MSMSTEPPE := sm6150
-TARGET_BOARD_PLATFORM := $(MSMSTEPPE)
-TARGET_SEPOLICY_DIR := msmsteppe
-
 # Power
 TARGET_PROVIDES_POWERHAL := true
 PRODUCT_PACKAGES += android.hardware.power-service.xiaomi-libperfmgr
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
+# Platform
+MSMSTEPPE := sm6150
+TARGET_BOARD_PLATFORM := $(MSMSTEPPE)
+TARGET_SEPOLICY_DIR := msmsteppe
 
 # QTI
 $(call inherit-product, device/qcom/common/common.mk)
