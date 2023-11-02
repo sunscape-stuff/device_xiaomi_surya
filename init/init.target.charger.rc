@@ -1,13 +1,30 @@
+# This script attempts to maximize charging when the device
+# is in the charger boot mode.
+# 
+#
+# We get in the "charger" boot mode when the device is powered
+# off and we connect it to a charger, since the device is off
+# and it won't do anything other than to just charge, we want
+# to make sure it's able to do so quickly and efficiently.
+
 on charger
+    # Keep 1 little and 1 big core on, just for good measure.
     write /sys/devices/system/cpu/cpu0/online 1
     write /sys/devices/system/cpu/cpu1/online 0
     write /sys/devices/system/cpu/cpu2/online 0
     write /sys/devices/system/cpu/cpu3/online 0
     write /sys/devices/system/cpu/cpu4/online 0
     write /sys/devices/system/cpu/cpu5/online 0
-    write /sys/devices/system/cpu/cpu6/online 0
+    write /sys/devices/system/cpu/cpu6/online 1
     write /sys/devices/system/cpu/cpu7/online 0
+    # Set the governor for both cpu0 and cpu6.
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "powersave"
+    write /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor "powersave"
+    # Set the frequencies to their absolute lowest to lock them at 300 MHz.
     write /sys/module/msm_performance/parameters/cpu_min_freq "0:3000000"
     write /sys/module/msm_performance/parameters/cpu_max_freq "0:3000000"
+    # Set the GPU maximum clock at 355 MHz.
     write /sys/class/kgsl/kgsl-3d0/max_gpuclk "355000000"
+    # Make sure that we're allowed to sleep.
+    write /sys/module/lpm_levels/parameters/sleep_disabled 0
+
