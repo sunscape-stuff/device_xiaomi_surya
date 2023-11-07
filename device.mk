@@ -4,6 +4,12 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# GSI keys
+$(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
+
+# Project ID Quota
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
 # Vendor blobs
 $(call inherit-product, vendor/xiaomi/surya/surya-vendor.mk)
 
@@ -186,16 +192,13 @@ BOARD_HAVE_QCOM_FM := true
 PRODUCT_VENDOR_PROPERTIES += \
     ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
-# FUSE passthrough
-PRODUCT_SYSTEM_PROPERTIES += \
+# FUSE  
+PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.fuse.passthrough.enable=true
 
 # GFX
 PRODUCT_VENDOR_PROPERTIES += \
     ro.config.avoid_gfx_accel=true
-
-# GSI keys
-$(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -245,8 +248,7 @@ PRODUCT_COPY_FILES += \
 
 # IWLAN
 PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.data.iwlan.enable=true \
-    ro.telephony.iwlan_operation_mode=legacy
+    persist.vendor.data.iwlan.enable=true
 
 # Keyguard
 PRODUCT_VENDOR_PROPERTIES += \
