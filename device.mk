@@ -196,6 +196,13 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     ro.config.avoid_gfx_accel=true
 
+# Lineage Health
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
+
+TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
+
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.memory.block@1.0.vendor
