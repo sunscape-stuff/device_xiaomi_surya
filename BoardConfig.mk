@@ -115,6 +115,9 @@ TARGET_COPY_OUT_VENDOR := vendor
 # qcom/common
 include device/qcom/common/BoardConfigQcom.mk
 
+# Power
+TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
+
 # Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.qcom
