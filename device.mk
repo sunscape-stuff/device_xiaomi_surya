@@ -138,6 +138,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.layer_caching_active_layer_timeout_ms=1000 \
     persist.sys.sf.native_mode=2 \
     persist.sys.sf.color_mode=9 \
+    ro.surface_flinger.enable_frame_rate_override=false \
     ro.surface_flinger.set_display_power_timer_ms=1000 \
     ro.surface_flinger.set_idle_timer_ms=500 \
     ro.surface_flinger.set_touch_timer_ms=750 \
