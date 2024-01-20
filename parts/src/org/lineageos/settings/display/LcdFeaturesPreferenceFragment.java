@@ -22,13 +22,13 @@ import android.os.SystemProperties;
 
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceFragment;
+import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SwitchPreference;
 
 import org.lineageos.settings.R;
 import org.lineageos.settings.utils.FileUtils;
 
-public class LcdFeaturesPreferenceFragment extends PreferenceFragment
+public class LcdFeaturesPreferenceFragment extends PreferenceFragmentCompat
         implements Preference.OnPreferenceChangeListener {
 
     public static final String HBM_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display/hbm";
