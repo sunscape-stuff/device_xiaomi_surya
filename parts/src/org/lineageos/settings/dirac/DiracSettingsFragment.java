@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018,2020 The LineageOS Project
+ * Copyright (C) 2018-2024 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,14 +24,14 @@ import android.util.Log;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
-import androidx.preference.PreferenceFragment;
+import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SwitchPreference;
 
 import com.android.settingslib.widget.MainSwitchPreference;
 
 import org.lineageos.settings.R;
 
-public class DiracSettingsFragment extends PreferenceFragment implements
+public class DiracSettingsFragment extends PreferenceFragmentCompat implements
         OnPreferenceChangeListener, OnCheckedChangeListener {
 
     private static final String TAG = "DiracSettingsFragment";
