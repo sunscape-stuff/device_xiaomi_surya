@@ -17,7 +17,8 @@
 package org.lineageos.settings.dirac;
 
 import android.os.Bundle;
-import android.widget.Switch;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.util.Log;
 
 import androidx.preference.ListPreference;
@@ -27,7 +28,6 @@ import androidx.preference.PreferenceFragment;
 import androidx.preference.SwitchPreference;
 
 import com.android.settingslib.widget.MainSwitchPreference;
-import com.android.settingslib.widget.OnMainSwitchChangeListener;
 
 import org.lineageos.settings.R;
 
