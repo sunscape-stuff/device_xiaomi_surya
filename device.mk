@@ -419,6 +419,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/usb/etc
 
 PRODUCT_PACKAGES += \
+    android.hardware.usb@1.3-service.dual_role_usb \
     init.qcom.usb.rc \
     init.qcom.usb.sh
 
