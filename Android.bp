@@ -1,7 +1,4 @@
 soong_namespace {
-    imports: [
-        "hardware/xiaomi",
-    ],
 }
 
 prebuilt_hidl_interfaces {
