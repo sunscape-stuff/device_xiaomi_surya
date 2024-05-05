@@ -96,13 +96,6 @@ PRODUCT_PACKAGES += \
     android.hardware.contexthub@1.0-impl.generic \
     android.hardware.contexthub@1.0-service
 
-# Crypto
-PRODUCT_VENDOR_PROPERTIES += \
-    ro.crypto.dm_default_key.options_format.version=2 \
-    ro.crypto.volume.metadata.method=dm-default-key \
-    ro.crypto.volume.filenames_mode=aes-256-cts \
-    ro.crypto.volume.options=::v2
-
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
