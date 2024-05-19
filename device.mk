@@ -433,6 +433,9 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.usb.config=mtp,adb
 endif
 
+# Vibrator
+OVERRIDE_QCOM_COMMON_VIBRATOR := hardware/xiaomi/aidl/vibrator
+
 # Userspace fastboot
 PRODUCT_PACKAGES += \
     fastbootd
