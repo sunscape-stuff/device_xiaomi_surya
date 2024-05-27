@@ -3,7 +3,6 @@
 
 #include <aidl/android/hardware/power/BnPower.h>
 #include <android-base/file.h>
-#include "power-common.h"
 
 #define DOUBLE_TAP_NODE "/sys/touchpanel/double_tap"
 
