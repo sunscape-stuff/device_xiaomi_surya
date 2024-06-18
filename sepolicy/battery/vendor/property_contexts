@@ -1,0 +1,3 @@
+init.vendor.powerhal.profile            u:object_r:powerhal_profile_prop:s0
+vendor.powerhal.ignore.init.profile     u:object_r:powerhal_profile_prop:s0
+vendor.powerhal.profile                 u:object_r:powerhal_profile_prop:s0

@@ -347,15 +347,17 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Power
 TARGET_PROVIDES_POWERHAL := true
 PRODUCT_PACKAGES += android.hardware.power-service.xiaomi-libperfmgr
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/power/default.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json \
+    $(LOCAL_PATH)/power/default.json:$(TARGET_COPY_OUT_VENDOR)/etc/default.json \
+    $(LOCAL_PATH)/power/powersave.json:$(TARGET_COPY_OUT_VENDOR)/etc/powersave.json \
+    $(LOCAL_PATH)/power/balanced.json:$(TARGET_COPY_OUT_VENDOR)/etc/balanced.json \
+    $(LOCAL_PATH)/power/performance.json:$(TARGET_COPY_OUT_VENDOR)/etc/performance.json
 
 # Platform
 MSMSTEPPE := sm6150
 TARGET_BOARD_PLATFORM := $(MSMSTEPPE)
 TARGET_SEPOLICY_DIR := msmsteppe
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # QTI
 $(call inherit-product, device/qcom/common/common.mk)
