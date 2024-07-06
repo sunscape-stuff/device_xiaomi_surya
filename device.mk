@@ -385,6 +385,9 @@ TARGET_COMMON_QTI_COMPONENTS := \
     wfd \
     wlan
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/qmi/qmi_fw.conf:$(TARGET_COPY_OUT_VENDOR)/etc/qmi_fw.conf
+
 # Radio
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.radio.add_power_save=0 \
