@@ -1,4 +1,4 @@
 [submodule "kprofiles"]
 	path = kprofiles
-	url = https://github.com/KProfiles/android_packages_apps_Kprofiles
+	url = https://github.com/sunscape-stuff/packages_apps_Kprofiles
 	branch = main
